@@ -1,0 +1,66 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DSM-5-TR Based Mental Health Assessment</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <script src="/static/script.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <main style="padding: 0.5rem;">
+        <div id="loading" class="loading-overlay" style="display: none;">
+          <div class="loading-spinner"></div>
+        </div>
+        <h2>DSM-5-TR
+        Mental Health Screening</h2>
+        {% if error %}
+        <div class="error">
+          <h2>Error</h2>
+          <p>{{ error }}</p>
+          <a href="/">Restart Assessment</a>
+        </div>
+        {% elif result %}
+        <div class="diagnosis-container">
+            <h3>Diagnosis Result</h3>
+            <div class="diagnosis-result">
+                {{ result|safe }}
+            </div>
+            <a href="/" class="restart-button">Restart Assessment</a>
+        </div>
+        {% else %}
+        <form id="assessment-form" method="POST" action="/ask">
+          <div class="progress-indicator">
+            Question {{ current_question + 1 }} of {{ total_questions }}
+          </div>
+          <p>{{ question }}</p>
+          <input type="hidden" id="answer" name="answer" value="">
+          <input type="hidden" id="severity" name="severity" value="">
+
+          <div class="severity-buttons">
+            {% if binary %}
+              <button type="button" onclick="submitAnswer('No')">No</button>
+              <button type="button" onclick="submitAnswer('Yes')">Yes</button>
+            {% else %}
+              <button type="button" onclick="submitAnswer('No')">No</button>
+              <button type="button" onclick="submitAnswer('Mild')">Mild</button>
+              <button type="button" onclick="submitAnswer('Moderate')">Moderate</button>
+              <button type="button" onclick="submitAnswer('Severe')">Severe</button>
+            {% endif %}
+          </div>
+
+          <div class="navigation-buttons">
+            <button type="button" onclick="goBack()" {% if current_question == 0 %}disabled{% endif %}>Previous</button>
+          </div>
+          <p class="question-weight">Question Weight: {{ question_weight * 100 }}%</p>
+        </form>
+        {% endif %}
+      </main>
+      <footer>
+        <a href="https://github.com/vwkyc/KBES-DSM" target="_blank">Made by @vwkyc</a>
+        <p class="disclaimer">For educational purposes only.
+          For clinical diagnosis, please consult a qualified mental health professional.</p>
+    </footer>
+    </div>
+  </body>
+</html>

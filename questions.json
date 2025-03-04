@@ -1,0 +1,183 @@
+[
+    {
+        "symptom": "depressed_mood",
+        "question": "Are you experiencing a depressed mood?",
+        "dsm_codes": ["296.2x", "296.4x"]
+    },
+    {
+        "symptom": "loss_of_interest",
+        "question": "Have you lost interest in activities you normally enjoy?",
+        "dsm_codes": ["296.2x", "296.4x"]
+    },
+    {
+        "symptom": "fatigue",
+        "question": "Do you feel fatigued easily?",
+        "dsm_codes": ["296.2x", "300.02"]
+    },
+    {
+        "symptom": "sleep_disturbance",
+        "question": "Do you experience sleep disturbances (insomnia or hypersomnia)?",
+        "dsm_codes": ["296.2x", "300.02"]
+    },
+    {
+        "symptom": "feelings_of_guilt",
+        "question": "Do you often experience feelings of guilt or worthlessness?",
+        "dsm_codes": ["296.2x"]
+    },
+    {
+        "symptom": "excessive_worry",
+        "question": "Do you experience excessive worry?",
+        "dsm_codes": ["300.02"]
+    },
+    {
+        "symptom": "restlessness",
+        "question": "Are you feeling restless?",
+        "dsm_codes": ["300.02"]
+    },
+    {
+        "symptom": "difficulty_concentrating",
+        "question": "Do you have difficulty concentrating?",
+        "dsm_codes": ["296.2x", "300.02", "314.0x"]
+    },
+    {
+        "symptom": "irritability",
+        "question": "Are you experiencing irritability?",
+        "dsm_codes": ["300.02", "296.4x", "314.0x"]
+    },
+    {
+        "symptom": "manic_episode",
+        "question": "Have you experienced a period of unusually high energy or mood?",
+        "dsm_codes": ["296.4x"]
+    },
+    {
+        "symptom": "decreased_need_for_sleep",
+        "question": "Have you experienced a decreased need for sleep during high energy periods?",
+        "dsm_codes": ["296.4x"],
+        "dependency": "manic_episode"
+    },
+    {
+        "symptom": "impulsivity",
+        "question": "Do you experience impulsive behavior or issues with impulsivity?",
+        "dsm_codes": ["296.4x", "314.0x"]
+    },
+    {
+        "symptom": "racing_thoughts",
+        "question": "Do you experience racing thoughts?",
+        "dsm_codes": ["296.4x"]
+    },
+    {
+        "symptom": "hallucinations",
+        "question": "Are you experiencing hallucinations?",
+        "dsm_codes": ["295.90"]
+    },
+    {
+        "symptom": "delusions",
+        "question": "Are you experiencing delusions?",
+        "dsm_codes": ["295.90"]
+    },
+    {
+        "symptom": "disorganized_speech",
+        "question": "Is your speech disorganized or hard to follow?",
+        "dsm_codes": ["295.90"]
+    },
+    {
+        "symptom": "social_withdrawal",
+        "question": "Have you withdrawn socially or lost interest in social interactions?",
+        "dsm_codes": ["295.90", "296.2x"]
+    },
+    {
+        "symptom": "disorganized_behavior",
+        "question": "Do you find yourself engaging in behavior that seems disorganized or inappropriate for the situation?",
+        "dsm_codes": ["295.90"]
+    },
+    {
+        "symptom": "obsessions",
+        "question": "Do you have persistent, unwanted thoughts (obsessions)?",
+        "dsm_codes": ["300.3"]
+    },
+    {
+        "symptom": "compulsions",
+        "question": "Do you engage in repetitive behaviors (compulsions)?",
+        "dsm_codes": ["300.3"],
+        "binary": true
+    },
+    {
+        "symptom": "distress",
+        "question": "Do these obsessions or compulsions cause you distress?",
+        "dependencies": ["obsessions", "compulsions"],
+        "dsm_codes": ["300.3"]
+    },
+    {
+        "symptom": "time_consuming",
+        "question": "Do these obsessions or compulsions take up a significant amount of your time?",
+        "dependencies": ["obsessions", "compulsions"],
+        "dsm_codes": ["300.3"]
+    },
+    {
+        "symptom": "suppress_obsessions",
+        "question": "Do you try to ignore or suppress these unwanted thoughts or urges or try to neutralize them with some other thought or action?",
+        "dependencies": ["obsessions", "compulsions"],
+        "dsm_codes": ["300.3"],
+        "binary": true
+    },
+    {
+        "symptom": "trauma_exposure",
+        "question": "Have you been exposed to a traumatic event?",
+        "dsm_codes": ["309.81"],
+        "binary": true
+    },
+    {
+        "symptom": "intrusive_memories",
+        "question": "Do you have intrusive memories of the event?",
+        "dependency": "trauma_exposure",
+        "dsm_codes": ["309.81"]
+    },
+    {
+        "symptom": "avoidance",
+        "question": "Do you avoid reminders of the event?",
+        "dependency": "trauma_exposure",
+        "dsm_codes": ["309.81"]
+    },
+    {
+        "symptom": "hyperarousal",
+        "question": "Do you experience a heightened state of alertness or hyperarousal?",
+        "dependency": "trauma_exposure",
+        "dsm_codes": ["309.81"]
+    },
+    {
+        "symptom": "flashbacks",
+        "question": "Do you experience flashbacks of the traumatic event?",
+        "dependency": "trauma_exposure",
+        "dsm_codes": ["309.81"]
+    },
+    {
+        "symptom": "inattention",
+        "question": "Do you have difficulty sustaining attention?",
+        "dsm_codes": ["314.0x"]
+    },
+    {
+        "symptom": "hyperactivity",
+        "question": "Are you experiencing hyperactivity?",
+        "dsm_codes": ["314.0x"]
+    },
+    {
+        "symptom": "difficulty_organizing",
+        "question": "Do you have difficulty organizing tasks and activities?",
+        "dsm_codes": ["314.0x"]
+    },
+    {
+        "symptom": "weight_appetite_change",
+        "question": "Have you experienced significant weight loss or gain, or a noticeable change in appetite?",
+        "dsm_codes": ["296.2x"]
+    },
+    {
+        "symptom": "hopelessness",
+        "question": "Do you often feel hopeless about the future?",
+        "dsm_codes": ["296.2x"]
+    },
+    {
+        "symptom": "muscle_tension",
+        "question": "Do you often experience muscle tension?",
+        "dsm_codes": ["300.02"]
+    }
+]

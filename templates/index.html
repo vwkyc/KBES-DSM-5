@@ -1,0 +1,38 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DSM-5-TR Mental Health Assessment</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}">
+  </head>
+  <body>
+    <div class="container">
+      <main style="padding: 0.5rem;">
+        <h2>DSM-5-TR
+        Mental Health Screening</h2>
+        
+        <div class="content">
+          <p>This screening tool evaluates symptoms based on DSM-5-TR criteria for: Major Depressive Disorder (296.2x), 
+          Bipolar Disorder (296.4x), Generalized Anxiety Disorder (300.02), ADHD (314.0x), 
+          Schizophrenia (295.90), OCD (300.3), and PTSD (309.81).</p>
+
+          <h3>Methodology</h3>
+          <ul>
+            <li>Questions weighted by symptom specificity and severity (None/Mild/Moderate/Severe)</li>
+            <li>70% threshold of disorder-specific symptoms required</li>
+            <li>Certainty score based on symptom presence and severity</li>
+            <li>Dynamic question weights based on symptom specificity</li>
+          </ul>
+
+          <a href="/start" class="button">Start Assessment</a>
+        </div>
+      </main>
+
+      <footer>
+        <a href="https://github.com/vwkyc/KBES-DSM" target="_blank">Made by @vwkyc</a>
+        <p class="disclaimer">For educational purposes only.
+          For clinical diagnosis, please consult a qualified mental health professional.</p>
+      </footer>
+    </div>
+  </body>
+</html>
